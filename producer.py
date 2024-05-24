@@ -63,10 +63,10 @@ if __name__ == "__main__":
 
     # contine produce messages 
     while True:
-        # sleep for 5 seconds
-        time.sleep(5)
+        # sleep for 15 seconds
+        time.sleep(15)
 
-        messages = [f"Message {i} {time.strftime('%Y-%m-%d %H:%M:%S')}" for i in range(4)]
+        messages = [f"Message {i} {time.strftime('%Y-%m-%d %H:%M:%S')}" for i in range(3)]
 
         # Create a pool of processes
         pool = multiprocessing.Pool()

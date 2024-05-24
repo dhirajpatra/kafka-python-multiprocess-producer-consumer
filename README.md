@@ -5,7 +5,7 @@
 
 This application demonstrates a Kafka setup with a producer and consumer using Python multiprocessing, Docker, and Docker Compose. The producer sends messages to a Kafka topic, and the consumer reads messages from the same topic. The configuration settings for Kafka are managed using a properties file.
 
-Kafka server can handle multiple consumer processes simultaneously. Kafka is designed to support multiple consumers reading from the same topic concurrently, and each consumer group can have multiple consumer instances spread across different processes or even different machines.
+Kafka server can handle multiple consumer processes simultaneously. Kafka is designed to support multiple consumers reading from the same topic concurrently. Though consumer group now have single consumer instances here. You can configure the kafka and the sysetm/server to make them too multiprocessing.
 
 ## Features
 

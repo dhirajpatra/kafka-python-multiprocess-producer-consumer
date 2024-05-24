@@ -52,14 +52,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - "kafka-volume:/confluent"
 
-  producer:
-    container_name: producer
-    build:
-      context: .
-      dockerfile: Dockerfile_producer
-    depends_on:
-      - kafka
-
   consumer:
     container_name: consumer
     build:
@@ -68,6 +60,14 @@ services:
     depends_on:
       - kafka
 
+  producer:
+    container_name: producer
+    build:
+      context: .
+      dockerfile: Dockerfile_producer
+    depends_on:
+      - kafka
+      
 volumes:
   kafka-volume:
   zookeeper-volume:
