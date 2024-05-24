@@ -1,0 +1,14 @@
+# Dockerfile_kafka
+FROM confluentinc/cp-kafka:7.6.1
+
+# Copy the initialization script
+COPY init-kafka.sh /usr/local/bin/init-kafka.sh
+
+# Copy the script to create Kafka topic
+COPY create-topic.sh /usr/local/bin/create-topic.sh
+
+# Ensure the entrypoint uses the initialization script
+ENTRYPOINT ["/usr/local/bin/init-kafka.sh"]
+
+# CMD to start Kafka
+CMD ["/etc/confluent/docker/run"]
